@@ -162,5 +162,35 @@
     </div>
 
     <script src="./js/script.js"></script>
+
+    <!-- Chatbot Assistant -->
+    <div class="chatbot-widget">
+        <button class="chatbot-toggle" aria-label="Abrir chat">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </button>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <span class="chatbot-avatar">🤖</span>
+                    <div>
+                        <h4>Assistente PontoBR</h4>
+                        <span class="online-status">Online agora</span>
+                    </div>
+                </div>
+                <button class="chatbot-close">&times;</button>
+            </div>
+            <div class="chatbot-messages">
+                <div class="chat-message bot">
+                    <div class="msg-content">Olá! Bem-vindo ao Restaurante PontoBR. Como posso ajudar você hoje?</div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="Digite sua mensagem..." id="chat-input-field">
+                <button id="chat-send-btn" aria-label="Enviar">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

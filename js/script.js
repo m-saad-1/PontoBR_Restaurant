@@ -247,4 +247,47 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Init
     updateCartUI();
+
+    // --- Chatbot Functionality ---
+    const chatToggle = document.querySelector('.chatbot-toggle');
+    const chatContainer = document.querySelector('.chatbot-container');
+    const chatClose = document.querySelector('.chatbot-close');
+    const chatInput = document.getElementById('chat-input-field');
+    const chatSend = document.getElementById('chat-send-btn');
+    const chatMessages = document.querySelector('.chatbot-messages');
+
+    if(chatToggle && chatContainer) {
+        chatToggle.addEventListener('click', () => {
+            chatContainer.classList.toggle('show');
+        });
+        chatClose.addEventListener('click', () => {
+            chatContainer.classList.remove('show');
+        });
+
+        const addMessage = (text, type) => {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-message ${type}`;
+            msgDiv.innerHTML = `<div class="msg-content">${text}</div>`;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const handleSend = () => {
+            const text = chatInput.value.trim();
+            if(text) {
+                addMessage(text, 'user');
+                chatInput.value = '';
+                
+                // Demo bot response
+                setTimeout(() => {
+                    addMessage('Desculpe, sou apenas um assistente de demonstração no momento. Como posso ajudar com seu pedido?', 'bot');
+                }, 1000);
+            }
+        };
+
+        chatSend.addEventListener('click', handleSend);
+        chatInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') handleSend();
+        });
+    }
 });
