@@ -1001,8 +1001,14 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--border-radius-lg);
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    max-width: 100%;
+    max-width: 600px; /* Reduced from 100% for better desktop appearance */
     margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+    .desktop-hide {
+        display: none !important;
+    }
 }
 
 .form-group {
