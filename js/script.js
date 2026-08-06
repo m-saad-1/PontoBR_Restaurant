@@ -121,6 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         localStorage.setItem('pontobr_cart', JSON.stringify(cart));
         
+        // Handle Floating Cart Bar and Chatbot Widget position dynamically
+        const floatingCartBar = document.querySelector('.floating-cart-bar');
+        const chatbotWidget = document.querySelector('.chatbot-widget');
+        if (floatingCartBar) {
+            if (totalItems > 0 && window.innerWidth <= 768) {
+                floatingCartBar.style.display = 'flex';
+                if (chatbotWidget) chatbotWidget.style.bottom = '155px'; // Gap above cart box
+            } else {
+                floatingCartBar.style.display = 'none';
+                if (chatbotWidget && window.innerWidth <= 768) chatbotWidget.style.bottom = '80px'; // Rest at tab bar level
+            }
+        }
+        
         // If on cart page, render items
         const cartWrapper = document.querySelector('.cart-items-wrapper');
         const emptyState = document.querySelector('.empty-cart-state');
@@ -247,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Init
     updateCartUI();
+    window.addEventListener('resize', updateCartUI);
 
     // --- Chatbot Functionality ---
     const chatToggle = document.querySelector('.chatbot-toggle');

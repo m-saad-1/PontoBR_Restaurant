@@ -1402,7 +1402,7 @@ input:focus, textarea:focus {
     .mobile-hide { display: none !important; }
     
     .mobile-search-bar { display: block; }
-    .floating-cart-bar { display: flex; }
+    /* Cart bar is dynamically shown by JS */
     
     .menu-grid {
         grid-template-columns: 1fr;
