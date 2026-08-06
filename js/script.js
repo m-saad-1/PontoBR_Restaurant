@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const div = document.createElement('div');
                     div.className = 'cart-item';
                     div.innerHTML = `
-                        <img src="${item.imgSrc || './Images/Deal1.png'}" class="cart-item-img lightbox-trigger" alt="${item.title}" style="cursor: pointer;">
+                        <img src="${item.imgSrc || './Images/Deal1.avif'}" class="cart-item-img lightbox-trigger" alt="${item.title}" style="cursor: pointer;">
                         <div class="cart-item-details">
                             <h4 class="cart-item-title">${item.title}</h4>
                             <span class="cart-item-price">${item.price}</span>
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = e.target.closest('.product-card');
             let title = 'Produto Especial';
             let priceText = 'R$ 35,90';
-            let imgSrc = './Images/Deal1.png';
+            let imgSrc = './Images/Deal1.avif';
             
             if (card) {
                 const titleEl = card.querySelector('h3');
