@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil - Restaurante PontoBR</title>
+    <link rel="icon" type="image/png" href="./Images/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -68,33 +69,84 @@
                         </ul>
                     </div>
                     
-                    <div class="profile-content" style="flex: 3 1 500px; background: white; border-radius: 16px; padding: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <h2 style="margin-bottom: 2.5rem; color: var(--clr-text-primary);">Dados Pessoais</h2>
+                    <div class="profile-content" style="flex: 3 1 500px; background: white; border-radius: 16px; padding: 3.5rem; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+                        <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
+                            <h2 style="font-size: 2rem;">Dados Pessoais</h2>
+                            <p style="color: #666;">Atualize suas informações e preferências.</p>
+                        </div>
                         
                         <form id="profileForm">
                             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
                                 <div>
-                                    <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: #444;">Nome Completo</label>
-                                    <input type="text" value="Maria Silva" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px;">
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">Nome Completo</label>
+                                    <input type="text" value="Maria Silva" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
                                 </div>
                                 <div>
-                                    <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: #444;">CPF</label>
-                                    <input type="text" value="123.456.789-00" style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9;" disabled>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">CPF</label>
+                                    <input type="text" value="123.456.789-00" style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9; color: #888; font-family: var(--ff-body); outline: none;" disabled>
                                 </div>
                             </div>
                             
                             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
                                 <div>
-                                    <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: #444;">E-mail</label>
-                                    <input type="email" value="maria.silva@email.com" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px;">
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">E-mail</label>
+                                    <input type="email" value="maria.silva@email.com" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
                                 </div>
                                 <div>
-                                    <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: #444;">Telefone</label>
-                                    <input type="tel" value="(11) 98765-4321" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px;">
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">Telefone</label>
+                                    <input type="tel" value="(11) 98765-4321" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
                                 </div>
                             </div>
                             
-                            <button type="button" onclick="alert('Dados atualizados com sucesso!')" class="btn btn-primary" style="border-radius: 50px; padding: 1rem 2.5rem; font-size: 1.05rem;">Salvar Alterações</button>
+                            <hr style="border: 0; border-top: 1px solid #eee; margin: 3rem 0;">
+
+                            <h3 style="margin-bottom: 1.5rem; color: var(--clr-text-primary); font-size: 1.5rem;">Endereço de Entrega</h3>
+                            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <div>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">Rua / Avenida</label>
+                                    <input type="text" value="Avenida Paulista, 1000" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">Número / Apto</label>
+                                    <input type="text" value="Apto 45" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+                                <div>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">Bairro</label>
+                                    <input type="text" value="Bela Vista" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">Cidade</label>
+                                    <input type="text" value="São Paulo" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #444;">CEP</label>
+                                    <input type="text" value="01310-100" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--ff-body); outline: none;">
+                                </div>
+                            </div>
+
+                            <hr style="border: 0; border-top: 1px solid #eee; margin: 3rem 0;">
+                            
+                            <h3 style="margin-bottom: 1.5rem; color: var(--clr-text-primary); font-size: 1.5rem;">Preferência de Pagamento</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3rem;">
+                                <label style="flex: 1 1 200px; padding: 1.5rem; border: 2px solid var(--clr-primary); border-radius: 12px; cursor: pointer; text-align: center; position: relative; background: #fffbf8;">
+                                    <input type="radio" name="payment" checked style="position: absolute; opacity: 0;">
+                                    <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">💳</span>
+                                    <span style="font-weight: 600; display: block;">Cartão de Crédito</span>
+                                    <span style="font-size: 0.85rem; color: #666;">Terminado em 4321</span>
+                                </label>
+                                <label style="flex: 1 1 200px; padding: 1.5rem; border: 2px solid #ddd; border-radius: 12px; cursor: pointer; text-align: center; position: relative;">
+                                    <input type="radio" name="payment" style="position: absolute; opacity: 0;">
+                                    <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">📱</span>
+                                    <span style="font-weight: 600; display: block;">PIX</span>
+                                    <span style="font-size: 0.85rem; color: #666;">Chave cadastrada</span>
+                                </label>
+                            </div>
+
+                            <div style="display: flex; justify-content: flex-end;">
+                                <button type="button" onclick="alert('Dados atualizados com sucesso!')" class="btn btn-primary" style="border-radius: 50px; padding: 1rem 3rem; font-size: 1.1rem; box-shadow: 0 10px 25px rgba(238, 108, 31, 0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Salvar Alterações</button>
+                            </div>
                         </form>
                     </div>
                 </div>

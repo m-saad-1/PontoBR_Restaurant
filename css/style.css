@@ -527,7 +527,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Menu Section */
 .menu {
     padding: 0.5rem 0 4rem; /* Significantly reduced top padding */
-    background-color: var(--clr-background); /* Matches Hero section */
 }
 
 /* Circular Categories */
@@ -1195,7 +1194,6 @@ input:focus, textarea:focus {
 /* Refined Hero container */
 .refined-hero {
     padding: 1.5rem 1.5rem 0.5rem 1.5rem; /* Small gap from walls, reduced bottom gap */
-    background-color: var(--clr-background);
 }
 
 .hero-image-frame {
